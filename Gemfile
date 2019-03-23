@@ -55,3 +55,4 @@ gem 'simplecov', require: false, group: :test
 
 # rails best practices
 gem "rails_best_practices"
+gem 'apipie-rails'

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>API documentation</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap.min.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/prettify.css'/>
+<link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/bundled/bootstrap-responsive.min.css'/>
+  <link type='text/css' rel='stylesheet' href='./apidoc/stylesheets/application.css'/>
+  <!-- IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div id='container'>
+          <h4><a href='#home'>Home</a></h4>
+  <ul>
+      <li><a href='#home-answer_question'>answer_question</a></li>
+      <li><a href='#home-random_questions'>random_questions</a></li>
+      <li><a href='#home-user_performance'>user_performance</a></li>
+  </ul>
+
+
+
+<div>
+<p>Another API description</p>
+</div>
+
+<hr>
+
+
+  <ul class='breadcrumb'  id='home'>
+    <li><a href='#'>Exams</a><span class='divider'>/</span></li>
+    <li class='active'>Home</li>
+  </ul>
+
+  <div class='page-header'>
+    <h1>
+      <a href='#home'>Home</a><br>
+      <small></small>
+    </h1>
+  </div>
+
+
+  <div class='accordion' id='accordion'>
+
+      <hr>
+
+      <ul class='breadcrumb' id='home-answer_question'>
+        <li>
+          <a href='#'>Exams</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#home'>Home</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>answer_question</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#home-answer_question'>
+              POST /answer_question
+            </a><br>
+            <small>Anser a question</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>question_id </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Question id</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a Integer</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>answer </strong><br>
+      <small>
+        optional
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Answer</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='home-random_questions'>
+        <li>
+          <a href='#'>Exams</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#home'>Home</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>random_questions</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#home-random_questions'>
+              GET /random_questions
+            </a><br>
+            <small>Get random questions to current user</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+      </div>
+      <hr>
+
+      <ul class='breadcrumb' id='home-user_performance'>
+        <li>
+          <a href='#'>Exams</a>
+          <span class='divider'>/</span>
+        </li>
+        <li>
+          <a href='#home'>Home</a>
+          <span class='divider'>/</span>
+        </li>
+        <li class='active'>user_performance</li>
+      </ul>
+
+      <div>
+          <h3>
+            <a href='#home-user_performance'>
+              GET /user_performance
+            </a><br>
+            <small>Get User performance</small>
+          </h3>
+      </div>
+
+      <div>
+        
+
+
+          <h2>Params</h2>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th>Param name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>section </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>Section Exam/Subject/Topic/Chapter</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+  <tr style='background-color:rgb(255,255,255);'>
+    <td>
+      <strong>name </strong><br>
+      <small>
+        required
+        
+      </small>
+    </td>
+    <td>
+      
+<p>name</p>
+
+        <p><strong>Validations:</strong></p>
+        <ul>
+            <li>
+<p>Must be a String</p>
+</li>
+        </ul>
+
+    </td>
+
+  </tr>
+
+  
+
+            </tbody>
+          </table>
+      </div>
+  </div>
+
+
+        
+      </div>
+    </div>
+    <hr>
+    <footer></footer>
+  </div>
+  <script type='text/javascript' src='./apidoc/javascripts/bundled/jquery.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/bootstrap-collapse.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/bundled/prettify.js'></script>
+<script type='text/javascript' src='./apidoc/javascripts/apipie.js'></script>
+</body>
+</html>

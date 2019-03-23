@@ -1,5 +1,8 @@
 class HomeController < ApplicationController
 
+  api :POST, "/answer_question", "Anser a question"
+  param :question_id, String, "Question id", :required => true
+  param :answer, String, "Answer"
   def answer_question
     question = Question.find_by_id(answer_params[:question_id])
     user_question = current_user.answerd_questions.find_or_create_by(question_id: answer_params[:question_id])
@@ -14,6 +17,7 @@ class HomeController < ApplicationController
     render json: {message: message }, status: :ok
   end
 
+  api :GET, "/random_questions", "Get random questions to current user"
   def random_questions
     skipped_ids = current_user.questions(false)
     ids = current_user.answerd_questions.pluck(:question_id)
@@ -25,6 +29,9 @@ class HomeController < ApplicationController
       ).as_json}, status: :ok
   end
 
+  api :GET, "/user_performance", "Get User performance"
+  param :section, String, "Section Exam/Subject/Topic/Chapter", :required => true
+  param :name, String, "name", :required => true
   def user_performance
     all_questions = get_query params[:section], params[:name]
     user_performance = current_user.user_performance(all_questions)
