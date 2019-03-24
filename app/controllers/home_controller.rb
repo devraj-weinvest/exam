@@ -22,7 +22,7 @@ class HomeController < ApplicationController
     skipped_ids = current_user.questions(false)
     ids = current_user.answerd_questions.pluck(:question_id)
     @all_questions = get_random_section
-    @questions = @all_questions.where.not(id: ids)
+    @questions = @all_questions.where.not(id: ids).order("RANDOM()").limit(6)
     @questions = @questions.empty? ? @all_questions.where(id: skipped_ids) : @questions
     render json: {questions: ActiveModel::Serializer::CollectionSerializer.new(
         @questions, serializer: QuestionSerializer
